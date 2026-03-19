@@ -4,11 +4,6 @@
 
 ---
 
-## 🖥️ Demo
-
-![Streamlit App Screenshot](docs/screenshot.png)
-
----
 
 ## 🌟 Features
 
@@ -17,7 +12,6 @@
 | **7 live RSS feeds** | AIN Online, AeroTime, Aviation Week, AVweb, Aviation Today, Simple Flying, FlightGlobal |
 | **Adaptive time window** | Starts at 24 h; auto-expands (48 h → 72 h → 7 days → 30 days → all time) so you **always get news** |
 | **TF-IDF + FAISS retrieval** | Fast, fully local semantic search — no paid embedding API required |
-| **Structured AI summaries** | Key Developments · Companies · Technologies · Industry Impact · 3-Line Executive Summary |
 | **Streamlit UI** | Clean web interface with sidebar controls and source attribution |
 | **CLI mode** | Pipe-friendly terminal output for automation / cron jobs |
 | **Zero cloud costs** | Only the Groq API call costs anything (free tier is generous) |
@@ -47,8 +41,8 @@ avionics-news-rag/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/avionics-news-rag.git
-cd avionics-news-rag
+git clone https://github.com/indupriyapotru-crypto/avionics-rag.git
+cd avionics-rag
 ```
 
 ### 2. Create and activate a virtual environment
@@ -156,38 +150,6 @@ If you want neural embeddings (better semantic recall), swap the `VectorStore` f
 | FlightGlobal | flightglobal.com | Global aerospace |
 
 To add more sources, simply add an entry to the `RSS_FEEDS` dict in `config.py`.
-
----
-
-## 🤖 Automating with Cron (Linux/macOS)
-
-Run the digest every morning at 7 AM and save to a log file:
-
-```cron
-0 7 * * * /path/to/.venv/bin/python /path/to/avionics-news-rag/main.py >> /path/to/digest.log 2>&1
-```
-
----
-
-## 🗺️ Roadmap
-
-- [ ] Persistent ChromaDB store (avoid re-indexing on every run)
-- [ ] Email digest delivery (SMTP)
-- [ ] Neural embedding option (`sentence-transformers`)
-- [ ] Docker image for one-command deployment
-- [ ] Topic filtering (e.g., "only avionics hardware", "only regulatory")
-
----
-
-## 🤝 Contributing
-
-1. Fork the repo
-2. Create a feature branch: `git checkout -b feat/my-feature`
-3. Commit your changes: `git commit -m "feat: add email digest"`
-4. Push: `git push origin feat/my-feature`
-5. Open a Pull Request
-
-Please open an issue first for large changes.
 
 ---
 
