@@ -1,4 +1,4 @@
-# ✈️ Avionics News RAG Agent
+# ✈️ Avionics News RAG
 
 > A Retrieval-Augmented Generation (RAG) pipeline that aggregates live avionics and aerospace news from multiple RSS feeds, retrieves the most relevant articles for your query, and generates a structured summary using an LLM — available as both a **CLI tool** and a **Streamlit web app**.
 

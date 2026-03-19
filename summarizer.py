@@ -13,11 +13,11 @@ client = Groq(api_key=GROQ_API_KEY)
 _PROMPT_TEMPLATE = """\
 You are an avionics news editor. The user wants to know about: "{topic}"
 
-Read the articles below and write a clean, flowing digest focused on that topic.
+Read the articles below and write a clean, detailed, flowing digest focused on that topic.
 
 Rules:
+- Write a moderately detailed digest (around 180–250 words) that fully explains the key point without over-compressing
 - Plain prose only — no headers, no bullet points, no "Sources:" section
-- 4-6 sentences, covering the most relevant developments to the topic
 - Do not repeat the same fact twice
 - Skip filler phrases like "In summary" or "It is worth noting"
 - If the articles don't directly cover the topic, summarise what is most
